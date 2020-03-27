@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Animal Crossing: New Horizons Color Picker</title>
+<link rel="icon" 
+      type="image/png" 
+      href="favicon.png">
+<link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="jscolor.js"></script>
+<script src="script.js"></script>
+</head>
+<body>
+<div id="title">
+    <h1>Animal Crossing: New Horizons</h1>
+    <h1>Color Picker</h1>
+</div>
+
+<div id="color-picker">
+    <input class="jscolor {onFineChange:'convert_color(this.hsv[0],this.hsv[1],this.hsv[2])'}" />
+    <button onclick="random()">Click for Random Color</button>
+</div>
+
+<br><br><br><br>
+<br><br><br>
+
+<div class="container">
+    <div id="bar-container">
+        <div>
+            <h1 id="hue-title" class="bar-title">Hue: <span id="hue-val">-1</span></h1>
+            <p class="arrow" id="hue-arrow">▼</p>
+            <div class="bar" id="hue">
+
+            </div>
+        </div>
+
+        <div>
+            <h1 class="bar-title">Vividness: <span id="vivid-val">-1</span></h1>
+            <p class="arrow" id="vivid-arrow">▼</p>
+            <div class="bar" id="vivid">
+            
+            </div>
+        </div>
+
+        <div>
+            <h1 class="bar-title">Brightness: <span id="bright-val">-1</span></h1>
+            <p class="arrow" id="bright-arrow">▼</p>
+            <div class="bar" id="brightness">
+            
+            </div>
+        </div>
+    </div>
+    
+    <div id="color-display"></div>
+</div>
+</body>
+</html>
