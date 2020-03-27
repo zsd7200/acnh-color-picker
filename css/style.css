@@ -1,0 +1,256 @@
+body {
+    font-family: 'Arvo', serif;
+    background: -webkit-linear-gradient(130deg,
+        #FFD9E1 0%,
+        #FFD9E1 10%,
+        #FFD0D6 10%,
+        #FFD0D6 20%,
+        #FFD9E1 20%,
+        #FFD9E1 30%,
+        #FFD0D6 30%,
+        #FFD0D6 40%,
+        #FFD9E1 40%,
+        #FFD9E1 50%,
+        #FFD0D6 50%,
+        #FFD0D6 60%,
+        #FFD9E1 60%,
+        #FFD9E1 70%,
+        #FFD0D6 70%,
+        #FFD0D6 80%,
+        #FFD9E1 80%,
+        #FFD9E1 90%,
+        #FFD0D6 90%,
+        #FFD0D6 100%
+        );
+    background-size: 220px 123px;
+    -webkit-animation: anim 80s linear infinite forwards;
+}
+
+@-webkit-keyframes anim {
+    0% { background-position: 0% 10%; }
+    10% { background-position: 10% 20%; }
+    20% { background-position: 20% 30%; }
+    30% { background-position: 30% 40%; }
+    40% { background-position: 40% 50%; }
+    50% { background-position: 50% 60%; }
+    60% { background-position: 60% 70%; }
+    70% { background-position: 70% 80%; }
+    80% { background-position: 80% 90%; }
+    90% { background-position: 90% 100%; }
+    100% { background-position: 100% 0%; }
+}
+
+button {
+    font-family: 'Arvo', serif;
+    font-weight: bold;
+    font-size: 16pt;
+    color: white;
+    background-color: #11C5B6;
+    padding: 10px 20px 10px 20px;
+    border: 2px solid #08B2A7;
+}
+
+button:hover { background-color: #13ddcd; }
+button:active { background-color: #08B2A7; }
+
+input {
+    font-family: 'Arvo', serif;
+    font-weight: bold;
+    font-size: 16pt;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border: 2px solid black;
+}
+
+.arrow {
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+    position: relative;
+    font-size: 14pt;
+    top: 10px;
+    width: 20px;
+}
+
+.bar {
+    border-radius: 10px;
+    height: 20px;
+    width: 500px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFC0C8;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.bar-title { margin-bottom: 2px; }
+
+#color-display {
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#title h1 { 
+    text-align: center;
+    margin-top: 4px; 
+    margin-bottom: 0px;
+    color: #FDCE4C;
+    text-shadow:
+        -1px -1px 5px #A26F37,
+         0px -1px 5px #A26F37,
+         1px -1px 5px #A26F37,
+         1px  0px 5px #A26F37,
+         1px  1px 5px #A26F37,
+         0px  1px 5px #A26F37,
+        -1px  1px 5px #A26F37,
+        -1px  0px 5px #A26F37;
+}
+
+#brightness {
+    background: -webkit-linear-gradient(right,
+        #E6E6E6 0%,
+        #E6E6E6 6.66%,
+        #D7D7D7 6.66%,
+        #D7D7D7 13.32%,
+        #C8C8C8 13.32%,
+        #C8C8C8 19.98%,
+        #BABABA 19.98%,
+        #BABABA 26.64%,
+        #ABABAB 26.64%,
+        #ABABAB 33.3%,
+        #9C9C9C 33.3%,
+        #9C9C9C 39.96%,
+        #8D8D8D 39.96%,
+        #8D8D8D 46.62%,
+        #7D7D7D 46.62%,
+        #7D7D7D 53.28%,
+        #6E6E6E 53.28%,
+        #6E6E6E 59.94%,
+        #5F5F5F 59.94%,
+        #5F5F5F 66.6%,
+        #4F4F4F 66.6%,
+        #4F4F4F 73.26%,
+        #3F3F3F 73.26%,
+        #3F3F3F 79.92%,
+        #2E2E2E 79.92%,
+        #2E2E2E 86.58%,
+        #1E1E1E 86.58%,
+        #1E1E1E 93.24%,
+        #0D0D0D 93.24%,
+        #0D0D0D 100%
+        );
+}
+
+#hue {
+    background: -webkit-linear-gradient(left,
+        #FB0100 0%,
+        #FB0100 3.33%,
+        #FC3001 3.33%,
+        #FC3001 6.66%,
+        #FD6601 6.66%,
+        #FD6601 9.99%,
+        #FD9902 9.99%,
+        #FD9902 13.32%,
+        #FECC03 13.32%,
+        #FECC03 16.65%,
+        #FCFD01 16.65%,
+        #FCFD01 19.98%,
+        #CBFE02 19.98%,
+        #CBFE02 23.31%,
+        #99FE02 23.31%,
+        #99FE02 26.64%,
+        #67FE04 26.64%,
+        #67FE04 29.97%,
+        #32FD03 29.97%,
+        #32FD03 33.3%,
+        #02FD04 33.3%,
+        #02FD04 36.63%,
+        #04FD32 36.63%,
+        #04FD32 39.96%,
+        #02FD68 39.96%,
+        #02FD68 43.29%,
+        #01FD99 43.29%,
+        #01FD99 46.62%,
+        #03FECC 46.62%,
+        #03FECC 49.95%,
+        #02FEFC 49.95%,
+        #02FEFC 53.28%,
+        #02CBFD 53.28%,
+        #02CBFD 56.61%,
+        #0299FC 56.61%,
+        #0299FC 59.94%,
+        #0166FB 59.94%,
+        #0166FB 63.27%,
+        #002FFB 63.27%,
+        #002FFB 66.6%,
+        #0001FB 66.6%,
+        #0001FB 69.93%,
+        #2F00F9 69.93%,
+        #2F00F9 73.26%,
+        #6401FC 73.26%,
+        #6401FC 76.59%,
+        #9801FA 76.59%,
+        #9801FA 79.92%,
+        #CA01F9 79.92%,
+        #CA01F9 83.25%,
+        #FC01FA 83.25%,
+        #FC01FA 86.68%,
+        #FC01CB 86.68%,
+        #FC01CB 89.91%,
+        #FB0196 89.91%,
+        #FB0196 93.24%,
+        #FD0165 93.24%,
+        #FD0165 96.57%,
+        #FB012E 96.57%,
+        #FB012E 100%
+        );
+}
+
+#vivid {
+    background: -webkit-linear-gradient(left,
+        #E6E6E6 0%,
+        #E6E6E6 6.66%,
+        #D7D7D7 6.66%,
+        #D7D7D7 13.32%,
+        #C8C8C8 13.32%,
+        #C8C8C8 19.98%,
+        #BABABA 19.98%,
+        #BABABA 26.64%,
+        #ABABAB 26.64%,
+        #ABABAB 33.3%,
+        #9C9C9C 33.3%,
+        #9C9C9C 39.96%,
+        #8D8D8D 39.96%,
+        #8D8D8D 46.62%,
+        #7D7D7D 46.62%,
+        #7D7D7D 53.28%,
+        #6E6E6E 53.28%,
+        #6E6E6E 59.94%,
+        #5F5F5F 59.94%,
+        #5F5F5F 66.6%,
+        #4F4F4F 66.6%,
+        #4F4F4F 73.26%,
+        #3F3F3F 73.26%,
+        #3F3F3F 79.92%,
+        #2E2E2E 79.92%,
+        #2E2E2E 86.58%,
+        #1E1E1E 86.58%,
+        #1E1E1E 93.24%,
+        #0D0D0D 93.24%,
+        #0D0D0D 100%
+        );
+}
+
+#bar-container { margin-left: 5%; }
+#bright-arrow, #vivid-arrow { left: 8px; }
+#color-picker { margin-top: 20px; text-align: center; }
+#hue-arrow { left: -2px; }
+#hue-title { margin-top: 0px; }
