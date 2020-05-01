@@ -1,4 +1,4 @@
-// processing map function converted to es6 arrow function
+// map function from Processing converted to es6 arrow function
 let remap = (val, in_min, in_max, out_min, out_max) => {
     return (val - in_min) * (out_max - out_min) / (in_max) - (in_min) + out_min;
 };
@@ -38,15 +38,16 @@ let convert_color = (h, s, b) => {
     const s_val = document.querySelector("#vivid-val");
     const b_val = document.querySelector("#bright-val");
     const display = document.querySelector("#color-display");
+    const barWidth = document.querySelector("#hue").offsetWidth;
     
     // declare padding and pixel values
     // padding is determined based purely on looks/location of arrow
     // px is determined based on x * y, where x = bar width (500)
     // and y = percent of each section (3.33% for hue, 6.66% for vivid/bright)
-    const hue_px = 16.65;       // 500 * 0.0333
-    const hue_pad = -2;
-    const vb_px = 33.3;         // 500 * 0.0666
-    const vb_pad = 8;
+    const hue_px = barWidth * 0.0333;
+    const hue_pad = (window.innerWidth <= 500) ? -5 : -2;       // change padding if window is less than 500px wide
+    const vb_px = barWidth * 0.0666;
+    const vb_pad = (window.innerWidth <= 500) ? 1 : 8;          // again, change padding if window is less than 500px wide
     
     // calculate new left value based on color
     const new_hue_px = (hue_px * color[0]) + hue_pad;

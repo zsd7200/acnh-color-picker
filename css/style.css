@@ -79,7 +79,7 @@ input {
     width: 500px;
 }
 
-.container {
+#container {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -254,3 +254,12 @@ input {
 #color-picker { margin-top: 20px; text-align: center; }
 #hue-arrow { left: -2px; }
 #hue-title { margin-top: 0px; }
+
+@media only screen and (max-width: 990px) {
+    #container { flex-direction: column; }
+    #color-display { order: -1; margin-bottom: 20px; }
+}
+
+@media only screen and (max-width: 500px) {
+    .bar { width: 300px; }
+}
