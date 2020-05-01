@@ -45,9 +45,9 @@ let convert_color = (h, s, b) => {
     // px is determined based on x * y, where x = bar width (500)
     // and y = percent of each section (3.33% for hue, 6.66% for vivid/bright)
     const hue_px = barWidth * 0.0333;
-    const hue_pad = (window.innerWidth <= 500) ? -5 : -2;       // change padding if window is less than 500px wide
+    const hue_pad = (barWidth < 500) ? -5 : -2;       // change padding if bar is less than 500px wide
     const vb_px = barWidth * 0.0666;
-    const vb_pad = (window.innerWidth <= 500) ? 1 : 8;          // again, change padding if window is less than 500px wide
+    const vb_pad = (barWidth < 500) ? 1 : 8;          // again, change padding if bar is less than 500px wide
     
     // calculate new left value based on color
     const new_hue_px = (hue_px * color[0]) + hue_pad;
@@ -76,12 +76,13 @@ let randomColor = () => {
     return Math.floor(Math.random()*16777215).toString(16).toUpperCase();
 };
 
-// random color function for button and for init
-let random = () => {
+// loadColor function for button and onload/onresize events
+let loadColor = (random = false) => {
     const picker = document.querySelector("input");
-    picker.value = randomColor();
+    if (random) { picker.value = randomColor(); }
     picker.jscolor.importColor();
     convert_color(picker.jscolor.hsv[0], picker.jscolor.hsv[1], picker.jscolor.hsv[2]);
 };
 
-window.onload = random;
+window.onload = () => { loadColor(true); };
+window.onresize = () => { loadColor(); };       // onresize is needed or else the arrows don't properly move once the bars get resized
